@@ -4,10 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<int> numbers = new List<int>();
-        int newNumber;
-        int sum = 0;
-        int count = 0;
+        List<float> numbers = new List<float>();
+        float newNumber;
+        float sum = 0;
+        float count = 0;
         float avg;
 
         Console.WriteLine(" Enter a list of numbers, type 0 when finished.");
@@ -15,7 +15,7 @@ class Program
         do
         {
             Console.Write("Enter Number: ");
-            newNumber = int.Parse(Console.ReadLine());
+            newNumber = float.Parse(Console.ReadLine());
             if (newNumber != 0)
             {
                 numbers.Add(newNumber);
