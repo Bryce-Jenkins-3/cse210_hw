@@ -53,7 +53,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("Sorry you didn't pass the line.");
+            Console.WriteLine("Sorry you didn't pass the class.");
         }
     }
 }
