@@ -7,7 +7,6 @@ class Program
         Random randomGenerator = new Random();
         int magicNumber = randomGenerator.Next(1, 101);
         int guess;
-        magicNumber = int.Parse(Console.ReadLine());
         
         do
         {
