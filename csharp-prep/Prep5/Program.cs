@@ -9,13 +9,13 @@ class Program
 
     static string PromptUserName()
     {
-        Console.WriteLine("What is your name? ");
+        Console.Write("What is your name? ");
         return Console.ReadLine();   
     }
 
     static int PromptUserNumber()
     {
-        Console.WriteLine("What is your favorite number? ");
+        Console.Write("What is your favorite number? ");
         return int.Parse(Console.ReadLine());
     }
 
@@ -26,8 +26,7 @@ class Program
 
     static void DisplayResult(int squareNumber, string userName)
     {
-        Console.WriteLine($"The squared number is {squareNumber}.");
-        Console.WriteLine($"The user name is {userName}.");
+        Console.WriteLine($"{userName}, the square of your number is {squareNumber}");
     }
     static void Main(string[] args)
     {
