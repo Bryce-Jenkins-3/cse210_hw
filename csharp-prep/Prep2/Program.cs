@@ -11,23 +11,32 @@ class Program
 
         if (gradeInt >= 90)
         {
-            Console.WriteLine("A");
+            Console.WriteLine("Your have an A");
         }
         else if (gradeInt >= 80)
         {
-            Console.WriteLine("B");
+            Console.WriteLine("You have a B");
         }
         else if (gradeInt >= 70)
         {
-            Console.WriteLine("C");
+            Console.WriteLine("You have a C");
         }
         else if (gradeInt >= 60)
         {
-            Console.WriteLine("D");
+            Console.WriteLine("You have a D");
         }
         else
         {
-            Console.WriteLine("F");
+            Console.WriteLine("You have an F");
+        }
+
+        if (gradeInt >= 70)
+        {
+            Console.WriteLine("Congratulations you passed the class!");
+        }
+        else
+        {
+            Console.WriteLine("Sorry you didn't pass the line.");
         }
     }
 }
