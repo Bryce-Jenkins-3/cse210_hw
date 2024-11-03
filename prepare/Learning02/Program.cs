@@ -1,17 +1,6 @@
 using System;
+using System.ComponentModel;
 
-public class Job
-{
-    public string _company;
-    public string _jobTitle;
-    public int _startYear;
-    public int _endYear;
-
-    public void Display()
-    {
-        Console.WriteLine($"{_jobTitle} ({_company}) {_startYear}-{_endYear}");
-    }
-}
 class Program
 {
     static void Main(string[] args)
@@ -31,5 +20,9 @@ class Program
         job1.Display();
         job2.Display();
         
+        Resume resume1 = new Resume();
+        resume1._name = "Billy Bob";
+        resume1._jobs.Add(job1);
+        resume1._jobs.Add(job2);
     }
 }
