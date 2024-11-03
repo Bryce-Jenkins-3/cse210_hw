@@ -24,5 +24,7 @@ class Program
         resume1._name = "Billy Bob";
         resume1._jobs.Add(job1);
         resume1._jobs.Add(job2);
+
+        Console.Write(resume1._jobs[0]);
     }
 }
