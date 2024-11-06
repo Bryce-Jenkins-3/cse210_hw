@@ -1,6 +1,6 @@
 using System;
 
-pulic class Entry
+public class Entry
 {
     public str entry;
     public str date;
