@@ -2,25 +2,25 @@ using System;
 
 public class Journal
 {
-    public list<str> prompts;
+    public list<string> prompts;
     public list<Entry> entries;
 
-    public newEntry()
+    public void newEntry()
     {
 
     }
 
-    public displayEntries()
+    public void displayEntries()
     {
 
     }
 
-    public saveFile()
+    public void saveFile()
     {
 
     }
 
-    public loadFile()
+    public void loadFile()
     {
         
     }

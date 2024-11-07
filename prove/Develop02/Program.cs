@@ -4,9 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        int done = 0;
+        int done = 1;
         int choice;
-        while (!done)
+        while (done != 0)
         {
             Console.WriteLine("Welcom to the Journal!");
             Console.WriteLine("Please Choose one of the following options.");
