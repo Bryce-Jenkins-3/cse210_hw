@@ -28,9 +28,7 @@ class Program
             }
             else if (choice == 1)
             {
-                Entry entry = new Entry();
-                newEntry = entry.getentry();
-                journal.entries.add(newEntry);
+
             }
             else if (choice == 2)
             {
