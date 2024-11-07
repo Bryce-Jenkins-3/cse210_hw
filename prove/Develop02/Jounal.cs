@@ -2,8 +2,8 @@ using System;
 
 public class Journal
 {
-    public list<string> prompts = new list<string>();
-    public list<Entry> entries = new list<Entry>();
+    public List<string> prompts = new List<string>();
+    public List<Entry> entries = new List<Entry>();
 
     public void newEntry()
     {
