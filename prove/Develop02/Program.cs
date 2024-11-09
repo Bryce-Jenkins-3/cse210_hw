@@ -6,6 +6,10 @@ class Program
     {
         int done = 1;
         int choice;
+
+        Journal journal = new Journal();
+        Entry entry = new Entry();
+
         while (done != 0)
         {
             Console.WriteLine("Welcom to the Journal!");
@@ -17,19 +21,15 @@ class Program
             Console.Write("Enter an integer for your choice: ");
             choice = int.Parse(Console.ReadLine());
 
-            Journal journal = new Journal();
-            Entry entry = new Entry();
-
-            entry.getentry();
-            Console.WriteLine(entry);
-
             if (choice == 0) //end the program
             {
                 done = choice;
             }
             else if (choice == 1) //add an entry to the journal
             {
-
+                entry.getentry();
+                journal.entries.Add(entry);
+                journal.displayEntries();
             }
             else if (choice == 2) // load the journal to a file
             {
