@@ -27,13 +27,11 @@ class Program
             }
             else if (choice == 1) //add an entry to the journal
             {
-                Entry entry = new Entry();
-                entry.getentry();
-                journal.entries.Add(entry);
+                journal.NewEntry();
             }
             else if (choice == 2) // Display entries
             {
-                journal.displayEntries();
+                journal.DisplayEntries();
             }
             else if (choice == 3) // load the journal to a file
             {
