@@ -11,7 +11,7 @@ public class Entry
         prompt = "What was great about today?";
         Console.WriteLine(prompt);
         entry = Console.ReadLine();
-        Console.Write("What is the date? ")
+        Console.Write("What is the date? ");
         date = Console.ReadLine();
     }
 }
