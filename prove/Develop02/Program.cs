@@ -18,23 +18,24 @@ class Program
             choice = int.Parse(Console.ReadLine());
 
             Journal journal = new Journal();
-
             Entry entry = new Entry();
+
             entry.getentry();
+            Console.WriteLine(entry);
 
-            if (choice == 0)
+            if (choice == 0) //end the program
             {
-                done = 1;
+                done = choice;
             }
-            else if (choice == 1)
-            {
-
-            }
-            else if (choice == 2)
+            else if (choice == 1) //add an entry to the journal
             {
 
             }
-            else if (choice == 3)
+            else if (choice == 2) // load the journal to a file
+            {
+
+            }
+            else if (choice == 3) // save the journal to a file
             {
 
             }

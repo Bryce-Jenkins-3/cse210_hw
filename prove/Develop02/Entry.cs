@@ -8,6 +8,10 @@ public class Entry
 
     public void getentry()
     {
-        Console.WriteLine("This is the get entry method.");
+        prompt = "What was great about today?";
+        Console.WriteLine(prompt);
+        entry = Console.ReadLine();
+        Console.Write("What is the date? ")
+        date = Console.ReadLine();
     }
 }
