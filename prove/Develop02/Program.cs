@@ -8,7 +8,6 @@ class Program
         int choice;
 
         Journal journal = new Journal();
-        Entry entry = new Entry();
 
         while (done != 0)
         {
@@ -28,9 +27,9 @@ class Program
             }
             else if (choice == 1) //add an entry to the journal
             {
+                Entry entry = new Entry();
                 entry.getentry();
                 journal.entries.Add(entry);
-                
             }
             else if (choice == 2) // Display entries
             {
