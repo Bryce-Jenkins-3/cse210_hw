@@ -25,7 +25,7 @@ public class Journal
         Console.Write("What is the name of the file? ");
         string fileName = Console.ReadLine();
 
-        using (StreamWriter outputFile = new StreamWriter(fileName));
+        using (StreamWriter outputFile = new StreamWriter(fileName))
         {
             foreach(Entry entry in entries)
             {
