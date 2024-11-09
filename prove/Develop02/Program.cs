@@ -12,12 +12,13 @@ class Program
 
         while (done != 0)
         {
-            Console.WriteLine("Welcom to the Journal!");
+            Console.WriteLine("Welcome to the Journal!");
             Console.WriteLine("Please Choose one of the following options.");
             Console.WriteLine("0. Quit");
             Console.WriteLine("1. Add journal entry");
-            Console.WriteLine("2. Load journal to a file");
-            Console.WriteLine("3. Save journal to a file");
+            Console.WriteLine("2. Display journal entries");
+            Console.WriteLine("3. Load journal to a file");
+            Console.WriteLine("4. Save journal to a file");
             Console.Write("Enter an integer for your choice: ");
             choice = int.Parse(Console.ReadLine());
 
@@ -29,13 +30,17 @@ class Program
             {
                 entry.getentry();
                 journal.entries.Add(entry);
+                
+            }
+            else if (choice == 2) // Display entries
+            {
                 journal.displayEntries();
             }
-            else if (choice == 2) // load the journal to a file
+            else if (choice == 3) // load the journal to a file
             {
 
             }
-            else if (choice == 3) // save the journal to a file
+            else if (choice == 4) // save the journal to a file
             {
 
             }

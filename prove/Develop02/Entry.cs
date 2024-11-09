@@ -14,4 +14,9 @@ public class Entry
         Console.Write("What is the date? ");
         date = Console.ReadLine();
     }
+
+    public void Display()
+    {
+        Console.WriteLine($"{date}: {entry}");
+    }
 }

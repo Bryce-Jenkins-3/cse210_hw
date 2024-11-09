@@ -12,7 +12,10 @@ public class Journal
 
     public void displayEntries()
     {
-        Console.WriteLine($"{entries[0].date}: {entries[0].entry}");
+        foreach (Entry entry in entries)
+        {
+            entry.Display();
+        }
     }
 
     public void saveFile()
