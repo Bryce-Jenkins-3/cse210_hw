@@ -35,7 +35,7 @@ class Program
             }
             else if (choice == 3) // load the journal to a file
             {
-                jounal.LoadFile();
+                journal.LoadFile();
             }
             else if (choice == 4) // save the journal to a file
             {

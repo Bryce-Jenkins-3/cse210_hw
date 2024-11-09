@@ -29,7 +29,7 @@ public class Journal
         {
             foreach(Entry entry in entries)
             {
-                ouputFile.WriteLine($"{entry.date}: {entry.entry}");
+                outputFile.WriteLine($"{entry.date}: {entry.entry}");
             }
         }
     }
