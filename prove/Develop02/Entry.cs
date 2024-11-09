@@ -12,7 +12,7 @@ public class Entry
         Console.WriteLine(prompt);
         entry = Console.ReadLine();
         Console.Write("What is the date? ");
-        Datetime theCurrentTime = Datetime.now;
+        DateTime theCurrentTime = DateTime.now;
         date = theCurrentTime.ToShortDateString();
     }
 

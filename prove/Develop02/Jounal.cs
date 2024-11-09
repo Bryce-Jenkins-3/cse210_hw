@@ -9,7 +9,7 @@ public class Journal
     {
         Entry entry = new Entry();
         entry.getentry();
-        journal.entries.Add(entry);
+        entries.Add(entry);
     }
 
     public void DisplayEntries()
