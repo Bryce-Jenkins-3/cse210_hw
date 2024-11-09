@@ -35,15 +35,15 @@ class Program
             }
             else if (choice == 3) // load the journal to a file
             {
-
+                jounal.LoadFile();
             }
             else if (choice == 4) // save the journal to a file
             {
-
+                journal.SaveFile();
             }
             else
             {
-
+                Console.WriteLine("Sorry that number is not an option.");
             }
         }
     }

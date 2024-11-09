@@ -20,13 +20,23 @@ public class Journal
         }
     }
 
-    public void saveFile()
+    public void SaveFile()
     {
+        Console.Write("What is the name of the file? ");
+        string fileName = Console.ReadLine();
 
+        using (StreamWriter outputFile = new StreamWriter(fileName));
+        {
+            foreach(Entry entry in entries)
+            {
+                ouputFile.WriteLine($"{entry.date}: {entry.entry}");
+            }
+        }
     }
 
-    public void loadFile()
+    public void LoadFile()
     {
-        
+        Console.Write("What is the name of the file? ");
+        string fileName = Console.ReadLine();
     }
 }
