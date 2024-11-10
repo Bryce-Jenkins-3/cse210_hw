@@ -42,7 +42,7 @@ public class Journal
         
         foreach (string line in lines)
         {
-            string[] parts = line.split(":");
+            string[] parts = line.Split(":");
 
             Entry entry = new Entry();
             entry.date = parts[0];
