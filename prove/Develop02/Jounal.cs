@@ -5,6 +5,8 @@ public class Journal
     public List<string> prompts = new List<string>();
     public List<Entry> entries = new List<Entry>();
 
+    prompts.Add("hello");
+
     public void NewEntry()
     {
         Entry entry = new Entry();
@@ -47,6 +49,7 @@ public class Journal
             Entry entry = new Entry();
             entry.date = parts[0];
             entry.entry = parts[1];
+            entries.Add(entry);
         }
     }
 }

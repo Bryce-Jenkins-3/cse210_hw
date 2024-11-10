@@ -16,8 +16,8 @@ class Program
             Console.WriteLine("0. Quit");
             Console.WriteLine("1. Add journal entry");
             Console.WriteLine("2. Display journal entries");
-            Console.WriteLine("3. Load journal to a file");
-            Console.WriteLine("4. Save journal to a file");
+            Console.WriteLine("3. Save journal to a file");
+            Console.WriteLine("4. Load journal to a file");
             Console.Write("Enter an integer for your choice: ");
             choice = int.Parse(Console.ReadLine());
 
@@ -33,13 +33,13 @@ class Program
             {
                 journal.DisplayEntries();
             }
-            else if (choice == 3) // load the journal to a file
-            {
-                journal.LoadFile();
-            }
-            else if (choice == 4) // save the journal to a file
+            else if (choice == 3) // save the journal to a file
             {
                 journal.SaveFile();
+            }
+            else if (choice == 4) // load the journal to a file
+            {
+                journal.LoadFile();
             }
             else
             {
