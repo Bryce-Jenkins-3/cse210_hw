@@ -38,5 +38,6 @@ public class Journal
     {
         Console.Write("What is the name of the file? ");
         string fileName = Console.ReadLine();
+        entries = System.IO.File.ReadAllLines(fileName);
     }
 }
