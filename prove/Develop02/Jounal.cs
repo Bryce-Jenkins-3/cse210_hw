@@ -5,8 +5,6 @@ public class Journal
     public List<string> prompts = new List<string>();
     public List<Entry> entries = new List<Entry>();
 
-    prompts.Add("hello");
-
     public void NewEntry()
     {
         Entry entry = new Entry();
