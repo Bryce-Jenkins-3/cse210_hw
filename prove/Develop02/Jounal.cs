@@ -38,6 +38,15 @@ public class Journal
     {
         Console.Write("What is the name of the file? ");
         string fileName = Console.ReadLine();
-        entries = System.IO.File.ReadAllLines(fileName);
+        string[] lines = System.IO.File.ReadAllLines(fileName);
+        
+        foreach (string line in lines)
+        {
+            string[] parts = line.split(":");
+
+            Entry entry = new Entry();
+            entry.date = parts[0];
+            entry.entry = parts[1];
+        }
     }
 }
