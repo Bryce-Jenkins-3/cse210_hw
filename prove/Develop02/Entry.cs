@@ -15,7 +15,7 @@ public class Entry
 
     public void getentry()
     {
-        prompt = prompts[randomGenerator.Next(1, prompts.Count())];
+        prompt = prompts[randomGenerator.Next(0, prompts.Count())];
         Console.WriteLine(prompt);
         entry = Console.ReadLine();
         DateTime theCurrentTime = DateTime.Now;
@@ -24,6 +24,7 @@ public class Entry
 
     public void Display()
     {
-        Console.WriteLine($"{date}: {entry}");
+        Console.WriteLine($"Date: {date} - Prompt: {prompt}");
+        Console.WriteLine($"{entry}\n");
     }
 }

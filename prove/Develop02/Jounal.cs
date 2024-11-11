@@ -28,7 +28,7 @@ public class Journal
         {
             foreach(Entry entry in entries)
             {
-                outputFile.WriteLine($"{entry.date}: {entry.entry}");
+                outputFile.WriteLine($"{entry.date}:{entry.prompt}:{entry.entry}");
             }
         }
     }
@@ -45,7 +45,8 @@ public class Journal
 
             Entry entry = new Entry();
             entry.date = parts[0];
-            entry.entry = parts[1];
+            entry.prompt = parts[1];
+            entry.entry = parts[2];
             entries.Add(entry);
         }
     }
