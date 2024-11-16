@@ -1,5 +1,9 @@
 using System;
 
+/*
+For the stretch challenge I added an option to add prompts that can be displayed by the user.
+*/
+
 class Program
 {
     static void Main(string[] args)
