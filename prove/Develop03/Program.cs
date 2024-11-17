@@ -4,6 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
+        Reference memory = new Reference("Proverbs", 3, 5);
+        Console.WriteLine(memory.GetReference());
+
         List<Word> words = new List<Word>();
         words.Add(new Word("Hi"));
         words.Add(new Word("Hello"));
