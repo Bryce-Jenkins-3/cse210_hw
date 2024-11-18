@@ -4,52 +4,57 @@ class Program
 {
     static void Main(string[] args)
     {
-        Reference memory = new Reference("Proverbs", 3, 5);
+        Reference memory = new Reference("2 Nephi", 2, 25, 26);
         Console.WriteLine(memory.GetReference());
 
-        List<Word> words = new List<Word>();
-        words.Add(new Word("Hi"));
-        words.Add(new Word("Hello"));
-        words.Add(new Word("High"));
+        string verse1 = "Adam fell that men might be; and men are, that they might have joy.";
+        string verse2 = "And the Messiah cometh in the fulness of time, that he may redeem the children of men from the fall. And because that they are redeemed from the fall they have become free forever, knowing good from evil; to act for themselves and not to be acted upon, save it be by the punishment of the law at the great and last day, according to the commandments which God hath given.";
+        string[] parts = verse1.Split();
+        string[] parts2 = verse2.Split();
+
+        List<Word> words1 = new List<Word>();
+        List<Word> words2 = new List<Word>();
+        foreach(string part in parts)
+        {
+            words1.Add(new Word(part));
+        }
+
+        foreach(string part in parts2)
+        {
+            words2.Add(new Word(part));
+        }
 
         List<Verse> verses = new List<Verse>();
-        verses.Add(new Verse(words));
-        verses.Add(new Verse(words));
-        verses.Add(new Verse(words));
+        verses.Add(new Verse(words1));
+        verses.Add(new Verse(words2));
 
         Scripture scripture = new Scripture(verses);
 
-        foreach(Verse verse in scripture.GetVerses())
+        string quit;
+        Console.Write("Press enter to continue or enter quit to quit: ");
+        quit = Console.ReadLine();     
+           
+        while (quit != "quit")
         {
-            foreach(Word word in verse.GetWords())
+            Console.Write("Press enter to continue or enter quit to quit: ");
+            quit = Console.ReadLine();
+            while (true)
             {
-                Console.Write(word.GetText() + " ");
+                if (Console.ReadKey(true).Key == ConsoleKey.Enter)
+                {
+                    scripture.HideRandomWord();
+                    Console.Clear();
+                    scripture.Display();
+                    break;
+                }
+                else if (Console.ReadKey(true).Key == ConsoleKey.Backspace)
+                {
+                    scripture.RevealLastHiddenWord();
+                    Console.Clear();
+                    scripture.Display();
+                    break;
+                }
             }
-            Console.WriteLine();
-        }
-
-        scripture.HideRandomWord();
-        scripture.HideRandomWord();
-
-        foreach(Verse verse in scripture.GetVerses())
-        {
-            foreach(Word word in verse.GetWords())
-            {
-                Console.Write(word.GetText() + " ");
-            }
-            Console.WriteLine();
-        }
-
-        scripture.RevealLastHiddenWord();
-        scripture.RevealLastHiddenWord();
-
-        foreach(Verse verse in scripture.GetVerses())
-        {
-            foreach(Word word in verse.GetWords())
-            {
-                Console.Write(word.GetText() + " ");
-            }
-            Console.WriteLine();
         }
     }
 }
