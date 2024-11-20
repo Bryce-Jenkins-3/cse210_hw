@@ -31,19 +31,22 @@ class Program
         Scripture scripture = new Scripture(verses);
 
         string quit;
+        
+        Console.Clear();
+        scripture.Display();
         Console.Write("Press enter to continue or enter quit to quit: ");
         quit = Console.ReadLine();     
            
         while (quit != "quit")
         {
-            Console.Write("Press enter to continue or enter quit to quit: ");
-            quit = Console.ReadLine();
+            Console.WriteLine("Now press enter to hide a word or Backspace to reveal the last word.");
             while (true)
             {
                 if (Console.ReadKey(true).Key == ConsoleKey.Enter)
                 {
                     scripture.HideRandomWord();
                     Console.Clear();
+                    Console.WriteLine(memory.GetReference());
                     scripture.Display();
                     break;
                 }
@@ -51,10 +54,13 @@ class Program
                 {
                     scripture.RevealLastHiddenWord();
                     Console.Clear();
+                    Console.WriteLine(memory.GetReference());
                     scripture.Display();
                     break;
                 }
             }
+            Console.Write("Press enter to continue or enter quit to quit: ");
+            quit = Console.ReadLine();
         }
     }
 }
