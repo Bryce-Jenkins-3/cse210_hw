@@ -1,28 +1,40 @@
 using System;
 using System.Collections.Generic;
 
-class Program
+public class Program
 {
     static void Main()
     {
+        Console.WriteLine("Welcome to the Calculator program!\n");
+        Console.WriteLine("Input any expression that involves +, -, /, *, ^, and ().");
+        Console.WriteLine("Use _ for negative numbers.");
+        Console.WriteLine("When you are done enter 0 to quit.\n");
+
         // Context (values of variables)
         var context = new Dictionary<string, double>
         {
             { "x", 5 },
             {"y", 3}
         };
-        Operand op1 = new Operand("y");
-        Operand op2 = new Operand(2);
-        // Create the expression: 3 + (2 * x)
-        Parse expression = new PlusParse();
-        var expr = expression.Divide("1+2+3+4");
+        while(true)
+        {
+            InputExpression userInput = new InputExpression();
+            userInput.SetExpression();
+            string expression = userInput.GetExpression();
+            if (expression == "0")
+            {
+                break;
+            }
+            else
+            {
+                var parsedExpression = ExpressionParser.Parse(expression);
 
-        var expr1 = new MultiplyOperator(op1, op2);
+                // Evaluate the expression
+                double result = parsedExpression.Evaluate(context);
 
-        // Evaluate the expression
-        double result = expr.Evaluate(context);
-
-        // Output the result
-        Console.WriteLine(result);  // Output: 13
+                // Output the result
+                Console.WriteLine(result);
+            }
+        }
     }
 }
